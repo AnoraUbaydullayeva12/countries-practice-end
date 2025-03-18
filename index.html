@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HOMETASK</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rubik:wght@300&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./media.css" />
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+  <div class="header">
+    <nav class="menu">
+      <h1>Where in the world?</h1>
+      <button onclick="toggleDarkMode()" class="button dark-mode">Dark Mode</button>
+    </nav>
+    <div class="box">
+      <!-- Search input -->
+      <input type="text" id="searchInput" onkeyup="searchCountries()" placeholder="Search for a country..." />
+      <!-- Dropdown to select continent -->
+      <select id="continentSelect" onchange="filterByContinent()">
+        <option value="">Select a continent</option>
+        <option value="Africa">Africa</option>
+        <option value="Americas">Americas</option>
+        <option value="Asia">Asia</option>
+        <option value="Europe">Europe</option>
+        <option value="Oceania">Oceania</option>
+        <option value="Antarctica">Antarctica</option>
+        <option value="Unknown">Unknown</option>
+      </select>
+      <!-- Display countries list -->
+      
+    </div>
+    <div class="container" id="countryList"></div>
+    
+  </div>
+  <div id="modal" class="modal">
+    <div class="modal-content" id="modal-content"></div>
+    <button id="close-modal" class="close-modal">Close</button>
+</div>
+</body>
+
+</html>
